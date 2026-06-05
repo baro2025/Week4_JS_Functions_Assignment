@@ -1,20 +1,20 @@
-/*
-Task 1: Library Late Fee Calculator 🚀🚀🚀🚀
+/* ============================================================
+   Week 4 — Functions Assignment
+   ------------------------------------------------------------
+   Write each function in its marked section.
+   The test code at the bottom calls your functions and
+   prints results to the console — don't change that part.
+   ============================================================ */
 
-You are working at a library and need to calculate late 
-fees for overdue books. Write a function called `calculateLateFee` 
-that takes the number of overdue days as input and calculates 
-the fee ($0.25 per day). Prompt the user to input the
-number of overdue days.
 
-Log the result as:
+/* ------------------------------------------------------------
+   Task 1: greetUser(name) 👋
 
-"The late fee is $[amount]."
+   Return a greeting string like "Hello, Fatuma!"
 
-Example:
-User Input: 10
-Output: "The late fee is $2.50."
-*/
+   greetUser("Fatuma") → "Hello, Fatuma!"
+   greetUser("Asha")   → "Hello, Asha!"
+   ------------------------------------------------------------ */
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
 function calculateLateFee(overduedays) {
@@ -32,28 +32,20 @@ const calculateLateFee = (overduedays) => {
   return days * feePerDay;
 }
 
-// Extra Task:
-// - Convert the function into a function expression.
+
+/* ------------------------------------------------------------
+   Task 2: calculateTip(bill, tipPercent) 💵
+
+   Return the tip amount.
+   Formula: bill * (tipPercent / 100)
+
+   calculateTip(50, 20) → 10
+   calculateTip(80, 15) → 12
+   ------------------------------------------------------------ */
+
+// ✍️ Solve it here ✍️
 
 
-
-/*
-Task 2 : Favorite Color Finder 🚀🚀🚀🚀
-
-You are designing a game that asks players for their favorite color. 
-Write a function called `findColorMeaning` that takes a color as input 
-(prompt the user) and logs the following meanings:
-
-- "Blue: You love calm and peace."
-- "Red: You are passionate and bold."
-- "Green: You are connected to nature."
-- "Yellow: You radiate happiness and energy."
-- For any other color: "That's a unique choice!"
-
-Example:
-User Input: "Red"
-Output: "Red: You are passionate and bold."
-*/
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
 funtion findColorMeaning() {
@@ -77,28 +69,30 @@ funtion findColorMeaning() {
 let color = prompt("Enter your favorite color:");
 findColorMeaning();
 
+/* ------------------------------------------------------------
+   Task 3: celsiusToFahrenheit(c) 🌡️
+
+   Return the temperature in Fahrenheit.
+   Formula: (c * 9) / 5 + 32
+
+   celsiusToFahrenheit(0)   → 32
+   celsiusToFahrenheit(100) → 212
+   ------------------------------------------------------------ */
+
+// ✍️ Solve it here ✍️
 
 
-// Extra Task:
-// - Rewrite the function using an arrow function.
 
 
+/* ------------------------------------------------------------
+   Task 4: isAdult(age) 🎂
 
-/*
-Task 3 : Lawyer's Case Log 🚀🚀🚀🚀
+   Return true if age >= 18, otherwise false.
+   Try writing this as an arrow function!
 
-You’re a lawyer, and you’ve been assigned to organize your case files. 
-Write a function called `logCase` that takes the client's name and 
-the case number as parameters. For each case, log:
-
-"Case #[caseNumber]: [clientName]'s case is now logged."
-
-Example:
-Input: logCase("John Doe", 12345)
-Output: "Case #12345: John Doe's case is now logged."
-*/
-
-// ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
+   isAdult(20) → true
+   isAdult(15) → false
+   ------------------------------------------------------------ */
 
 function logCase(clientName, caseNumber) {
    console.log(`Case #${caseNumber}: ${clientName}'s case is now logged.`);
@@ -106,27 +100,19 @@ function logCase(clientName, caseNumber) {
 logCase("John Doe", 12345);
 
 
-// Extra Task:
-// - Rewrite the function as an arrow function.
 
 
-/*
-Task 4 : Attendance Tracker 🚀🚀🚀🚀
+/* ------------------------------------------------------------
+   🚀 STRETCH (optional): getInitials(firstName, lastName)
 
-You’re a teacher tracking student attendance. Write a function called 
-`markAttendance` that takes a student’s name and a boolean `isPresent` 
-value. If the student is present, log:
+   Return initials like "F.A."
+   getInitials("Fatuma", "Ali") → "F.A."
+   ------------------------------------------------------------ */
 
-"[studentName] is present."
+// ✍️ Stretch: solve it here ✍️
 
-If the student is absent, log:
 
-"[studentName] is absent."
 
-Example:
-Input: markAttendance("Amina", true)
-Output: "Amina is present."
-*/
 
 // ✍️ ✍️ ✍️ ✍️ Write the function here ✍️ ✍️ ✍️ ✍️
 function markAttendance(studentName, isPresent) {
@@ -136,43 +122,16 @@ function markAttendance(studentName, isPresent) {
       console.log(`${studentName} is absent.`);
    }
 
+console.log("\n=== Task 2: calculateTip ===");
+console.log(calculateTip(50, 20));  // → 10
+console.log(calculateTip(80, 15));  // → 12
 
-// Extra Task:
-// - Convert the function into a function expression.
+console.log("\n=== Task 3: celsiusToFahrenheit ===");
+console.log(celsiusToFahrenheit(0));    // → 32
+console.log(celsiusToFahrenheit(100));  // → 212
+console.log(celsiusToFahrenheit(25));   // → 77
 
-
-
-/*
-STRETCH TASK: Student Grade Report Generator 🏈🏈🏈🏈
-
-You are a teacher, and you want to automate the creation of detailed grade reports for your class. Write a program that includes the following steps:
-
-1. Write a function called `calculateAverage` that takes three test scores (numbers) as parameters and returns the average of those scores.
-
-2. Write another function called `determineGrade` that takes the average score as a parameter and returns the letter grade based on the following rules:
-   - "A" for average scores of 90 and above
-   - "B" for scores between 80 and 89
-   - "C" for scores between 70 and 79
-   - "F" for scores below 70
-
-3. Write a third function called `generateReport` that:
-   - Takes a student's name and three test scores as parameters.
-   - Uses `calculateAverage` to calculate the average score.
-   - Uses `determineGrade` to find the letter grade.
-   - Returns a full report string in this format:
-     "[StudentName] - Average Score: [average], Grade: [letterGrade]"
-
-4. Finally, use the `prompt` function to input the student’s name and three test scores, and display the generated report using `console.log`.
-
-Example:
-User Input:
-Name: Amina
-Scores: 85, 90, 78
-
-Output:
-"Amina - Average Score: 84.33, Grade: B"
-
-Extra Credit:
-- Extend the program to accept multiple students' names and scores and generate a report for each student using a loop.
-- Use an arrow function for at least one of the functions.
-*/
+console.log("\n=== Task 4: isAdult ===");
+console.log(isAdult(20));  // → true
+console.log(isAdult(15));  // → false
+console.log(isAdult(18));  // → true
